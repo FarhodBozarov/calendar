@@ -46,6 +46,7 @@ body {
 }
 
 .ikkinchi_qism {
+    position: relative;
     width: 300px;
     height: 380px;
     background-color: white;
@@ -92,11 +93,54 @@ body {
 }
 
 .active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 10px;
-    border-radius: 50%;
     color: white;
     background-color: #00AB55;
+}
+
+.yillar {
+    display: none;
+    position: absolute;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    left: 0px;
+    bottom: 0;
+    z-index: 1;
+    width: 300px;
+    height: 380px;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.yillar .gold {
+    position: fixed;
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    border-radius: 0 15px 0 0 ;
+}
+
+.yillar .rotate {
+    transform: rotate(180deg);
+}
+
+#yillar1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    font-size: 17px;
+    font-weight: bold;
+    overflow-y: auto;
+    margin-top: 70px;
+}
+
+#yillar1 span {
+    display: flex;
+    padding: 8px 15px ;
+    border-radius: 60px;
+    margin: 6px 0;
+    transition: .15s ease-in-out;
+    cursor: pointer;
+}
+#yillar1 span:hover {
+    background: #e8e7e7;
 }
